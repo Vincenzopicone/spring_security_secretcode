@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "b44e9f6a-1daa-4c22-a86e-13cc81691835",
+		"name": "Spring Security",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25926925"
+	},
+	"item": [
+		{
+			"name": "Add user con codice segreto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"CORRETTOPROVASECRETCODE CHECK\",\n    \"username\":\"vinsPicCORRETTOFFF\",\n    \"email\":\"vins.picCORRETTOFF@example.com\",\n    \"password\":\"pass222\",\n    \"secretCode\": \"180821\",\n    \"roles\": [\"ROLE_ADMIN\", \"ROLE_USER\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add user con carta di credito",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"PROVA CARTA DI CREDITO\",\n    \"username\":\"CREDIT CARD\",\n    \"email\":\"creditcard@example.com\",\n    \"password\":\"pass222\",\n    \"cartaCredito\": \"65743292646398\",\n    \"secretCode\": \"180721\",\n    \"roles\": [\"ROLE_ADMIN\", \"ROLE_USER\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
